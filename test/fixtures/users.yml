@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  usename: MyString
+  lives: MyString
+  points: MyString
+
+two:
+  usename: MyString
+  lives: MyString
+  points: MyString
