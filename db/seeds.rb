@@ -7,10 +7,19 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
+Score.destroy_all
 
 User.create([
-   { username: 'sabby155', lives:1, points:3},
-   { username: 'killer_mike', lives:2, points:5}, 
-   { username: 'dankomo', lives:2, points:6},    
+   { username: 'sabby155', lives:1},
+   { username: 'killer_mike', lives:2}, 
+   { username: 'dankomo', lives:2},    
 ])
+
+Score.create([
+   {points: 5000, pizza: 4, user_id: 1 },
+   {points: 580, pizza: 6, user_id: 2 },
+   {points: 3000, pizza: 2, user_id: 3 }
+])
+
+
 

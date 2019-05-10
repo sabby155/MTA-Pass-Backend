@@ -10,15 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_07_155805) do
+ActiveRecord::Schema.define(version: 2019_05_10_133500) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "scores", force: :cascade do |t|
+    t.integer "points"
+    t.integer "pizza"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "username"
-    t.integer "lives", default: 0
-    t.integer "points", default: 0
+    t.integer "lives", default: 3
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
